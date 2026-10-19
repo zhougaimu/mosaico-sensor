@@ -1,0 +1,25 @@
+menu "Mosaico Sensor"
+
+    config WIFI_SSID
+        string "WiFi SSID"
+        default "my-ssid"
+
+    config WIFI_PASSWORD
+        string "WiFi Password"
+        default "my-password"
+
+    config REPORT_URL
+        string "Report server URL"
+        default "http://192.168.1.100:8000/api/sensor"
+
+    config REPORT_INTERVAL_S
+        int "Report interval (seconds)"
+        default 10
+        range 1 3600
+
+    config SENSOR_ADC_CHANNEL
+        int "Sensor ADC channel (ADC1)"
+        default 0
+        range 0 9
+
+endmenu
